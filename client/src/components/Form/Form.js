@@ -3,7 +3,7 @@ import React from 'react'
 const Form = () => {
   return (
     
-        <div className="container">
+        <div className="container absolute">
         
             <form action="" className="form">
             
@@ -32,7 +32,7 @@ const Form = () => {
                 
                 </div>
                 
-            
+                <input type="submit" className='submit'/>
             </form>
         
         </div>
