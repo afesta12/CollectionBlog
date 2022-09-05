@@ -1,10 +1,20 @@
 import React from 'react';
+import Form from './components/Form/Form';
+import Header from './components/Header'
+import Posts from './components/Posts/Posts';
 
 const App = () => {
 
     return (
 
-        <div><h1>App</h1></div>
+        <div>
+
+            <Header />
+            <Form />
+            <Posts />
+
+        </div>
+        
 
     )
 
