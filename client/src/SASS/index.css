@@ -73,13 +73,19 @@ textarea {
   padding: 0.25rem;
   margin: 0.25rem 0;
 }
+.form__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.25rem 0;
+}
 
 .absolute {
   position: absolute;
   z-index: 2;
   left: 50%;
   bottom: 50%;
-  transform: translate(-50%, -40.25%);
+  transform: translate(-50%, -45%);
   background: rgba(51, 170, 51, 0.7);
 }
 
