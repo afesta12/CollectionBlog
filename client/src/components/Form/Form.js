@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import FileBase from 'react-file-base64';
+import { useDispatch } from 'react-redux';
+import { createPost } from '../../actions/posts'
+
 
 const Form = () => {
  
@@ -11,7 +14,14 @@ const Form = () => {
         selectedFile: ''
 
     })
-    const handleSubmit = () => {
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+
+        dispatch(createPost(postData));
         
     }
 
@@ -73,7 +83,7 @@ const Form = () => {
                     <FileBase 
                         type='file'
                         multiple={false}
-                        onDone={(base64) => setPostData({...postData, selectedFile: base64})}
+                        onDone={({ base64 }) => setPostData({...postData, selectedFile: base64})}
                     />
                 
                 </div>
