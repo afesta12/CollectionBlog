@@ -13,7 +13,11 @@ const Posts = () => {
     
         <div className="container__posts">
         
-            <Post />
+            {posts.map((post) => (
+
+              <Post key={ post._id } post={post} />
+
+            ))}
         
         </div>
     

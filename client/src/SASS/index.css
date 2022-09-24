@@ -28,7 +28,6 @@ textarea {
 .card__image {
   height: 200px;
   width: 100%;
-  background-image: url("img.jpg");
   background-size: cover;
 }
 .card__image__container {
