@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 
 const App = () => {
 
+    const [currentId, setCurrentId] = useState(null);
     const [showForm, setShowForm] = useState(false);
     const dispatch = useDispatch();
 
@@ -21,8 +22,8 @@ const App = () => {
         <div>
 
             <Header onFormAdd={ () => setShowForm(!showForm) } />
-            { showForm && <Form />}
-            <Posts />
+            { showForm && <Form currentId={currentId} setCurrentId={setCurrentId}/>}
+            <Posts setCurrentId={setCurrentId}/>
 
         </div>
         

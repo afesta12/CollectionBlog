@@ -47,7 +47,7 @@ textarea {
 .card__flex {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.75rem;
+  align-items: center;
 }
 
 .form {

@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 
-const Post = ({ post }) => {
+const Post = ({ post, setCurrentId }) => {
 
   return (
     <div className='card'>
@@ -11,7 +11,12 @@ const Post = ({ post }) => {
 
             <div className="card__image__container">
 
-                <h2 className="card__user">{ post.user }</h2>
+                <div className='card__flex'>
+                
+                    <h2 className="card__user">{ post.user }</h2>
+                    <span class="material-symbols-outlined" onClick={() => setCurrentId(post._id)}>more_horiz</span>
+                
+                </div>
                 <h3 className="card__date">{ moment(post.createdAt).fromNow() }</h3>
             
             </div>
@@ -20,7 +25,7 @@ const Post = ({ post }) => {
 
         <div className="card__container">
         
-            <div className="card__tags">{ post.tags.map((tag) => `#${tag}) `) }</div>
+            <div className="card__tags">{ post.tags.map((tag) => `#${tag} `) }</div>
             <div className="card__title"><h4>{ post.title }</h4></div>
             <div className="card__message">{ post.message }</div>
 
