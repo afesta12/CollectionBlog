@@ -38,9 +38,20 @@ const Form = ({ currentId, setCurrentId }) => {
 
         }
         
+        clear();
     }
 
     const clear = () => {
+
+        setCurrentId = null;
+        setPostData({
+            user: '',
+            title: '',
+            message: '',
+            tags: '',
+            selectedFile: ''
+    
+        })
         
     }
 

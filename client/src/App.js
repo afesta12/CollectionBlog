@@ -15,7 +15,7 @@ const App = () => {
 
         dispatch(getPosts());
 
-    }, [dispatch])
+    }, [currentId, dispatch])
 
     return (
 
